@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	body {padding:0;margin:0}
+	header {width:100%; height:350px; background-color:green; opacity:1}
+	footer {width:100%; height:350px; background-color:green; opacity:1}
+	.action-m {width:100%;height:350px; transition: all .1s;overflow:hidden;}
+	.action-m.wrap {width:100%;height:1000px;background:url('https://post-phinf.pstatic.net/MjAxNzExMThfMTU3/MDAxNTEwOTg1MjU0MDMw.UnE6KDZeDvuggh3tCZyAh1TnZdmvZQGLVZbT2nhBIAYg.9QvOIhmCZnSwa0BXJ8CVs3ROxovGtlVmRmglS2HE8esg.JPEG/20171118-006.jpg?type=w1200') no-repeat 0 0;     background-size: cover; }
+	.action-m .action-item{position:relative;transition: all 1s;width:500px;height:500px}
+	.item1 {background-color:blue;height:500px}
+	.item2 {background-color:red}
+	.action-m.item3 {background-color:green;}
+	.action-m.item4 {background-color:black;height:700px}
+	.v-hidden { visibility: hidden;}
+
+
+  </style>
+  <script type="module" src="./movementaction.js"></script>
+ <body>
+
+  <header>
+	헤더 영역
+  </header>
+
+
+  <div id='hwisam'>
+  <div class='action-m wrap' data-acc=0.3 >
+	배경입니다.
+
+	<ul>
+		<li style='text-align:center'>
+			<img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' style='height:250px' data-direction='r' alt='' />
+		</li>
+		<li style='text-align:left'>
+			<img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' style='height:250px' data-direction='l' alt='' />
+		</li>
+		<li style='text-align:right'>
+			<img class='v-hidden action-item' src='https://i.pinimg.com/originals/e0/72/a0/e072a01669b110a1d903449ce161da84.jpg' style='height:250px' data-direction='n' alt='' />
+		</li>
+	</ul>	
+	
+
+  </div>
+	  <div class='action-m item1' data-acc=1 style='position:absolute;top:0px;left:50px;width:300px;height:300px'>
+		  <p>영역1</p>
+		  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' data-direction='s' alt='' />
+	  </div>
+	  <div class='action-m item2' data-acc=1 style='position:absolute;top:500px;right:50px;width:300px;height:300px'>
+		  <p>영역2</p>
+		  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg'  alt='' />
+	  </div>
+
+
+  <div class='action-m item3' data-acc=1>
+	  <p>영역3</p>
+	  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' data-direction='n' alt='' />
+  </div>
+  <div class='action-m item4' data-acc=.2>
+	  <p>영역4</p>
+	  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' data-direction='l' alt='' />
+  </div>
+  <div class='action-m item1' data-acc=0>
+	  <p>영역1</p>
+	  <a href='' style='float:left'>aaasdfsdfsdf</a>
+	  <img style='float:left' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' data-direction='r' alt='' />
+	  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' data-direction='r' alt='' />
+  </div>
+  <div class='action-m item2' data-acc=0>
+	  <p>영역2</p>
+	  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' data-direction='r' alt='' />
+  </div>
+
+  <div class='action-m item3' data-acc=4>
+	  <p>영역3</p>
+	  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' alt='' />
+  </div>
+  <div class='action-m item4' data-acc=0>
+	  <p>영역4</p>
+	  <img class='v-hidden action-item' src='https://t1.daumcdn.net/news/201906/20/tvdaily/20190620082408456xumg.jpg' alt='' />
+  </div>
+
+  </div>
+
+<footer>
+푸터 
+</footer>
+  <script type="module">
+	import ClassMovementAction from './movementaction.js'
+
+	let action = new ClassMovementAction(document.getElementById('hwisam'))
+
+	
+	action.init()
+
+	window.hwisam = action
+  </script>
+
+ </body>
+</html>
