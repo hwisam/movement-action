@@ -1,0 +1,23 @@
+{
+  "name": "movement-action",
+  "version": "1.0.0",
+  "description": "모션 액션(v 0.01)",
+  "main": "movementaction.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwisam/movement-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hwisam/movement-action/issues"
+  },
+  "homepage": "https://github.com/hwisam/movement-action#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

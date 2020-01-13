@@ -7,7 +7,7 @@ export default class ClassMovementAction {
     this.parentNodeAllOffsetTop = []
     this.scopeObj = []
     this.screen = {}
-    this.limitTop = -300
+    this.limitTop = -150
     this.acceleration = 1 // data-acc : 스크롤에 따른 가속도
     this.asIsTop = 0
     this.isDestroy = false
